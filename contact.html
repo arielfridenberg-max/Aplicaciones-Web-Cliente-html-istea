@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Vivero El Bosque</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #f7f9f7;
+        }
+
+        /* Header / Navegación */
+        header {
+            background-color: #0a5737;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #a8e6cf;
+        }
+
+        /* Contenido */
+        .contenido {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .contenido h1 {
+            color: #0a5737;
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .info-contacto {
+            background: white;
+            border-radius: 12px;
+            padding: 35px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .info-contacto h2 {
+            color: #0a5737;
+            font-size: 1.3rem;
+            margin: 25px 0 8px 0;
+        }
+
+        .info-contacto h2:first-child {
+            margin-top: 0;
+        }
+
+        .info-contacto p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #0a5737;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 80px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <header>
+        <a href="index.html" class="logo">Vivero El Bosque</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main class="contenido">
+        <h1>Contactanos</h1>
+
+        <p class="intro">
+            ¿Tenés dudas sobre el cuidado de alguna planta o querés asesoramiento personalizado?<br>
+            Escribinos o visitanos, estamos para ayudarte.
+        </p>
+
+        <div class="info-contacto">
+            <h2>Horarios de atención</h2>
+            <p>Lunes a sábado de 9:00 a 18:00 hs.</p>
+
+            <h2>Dirección</h2>
+            <p>Ruta 25 km 4</p>
+
+            <h2>Teléfono / WhatsApp</h2>
+            <p>+54 9 11 2744-0063</p>
+
+            <h2>Correo electrónico</h2>
+            <p>vivero@gmail.com</p>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        © 2026 Vivero El Bosque — Cultivamos con amor
+    </footer>
+
+</body>
+
+</html>
