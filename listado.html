@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intranet: listado de plantas.">
+    <title>Intranet · Plantas | Vivero Raíz</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body data-privada="true">
+
+    <header class="site-header">
+        <div class="contenedor header-inner">
+            <a href="index.html" class="logo">Vivero Raíz</a>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+            <nav id="menu" class="nav" aria-label="Principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li id="nav-sesion"><a href="login.html" class="btn btn-oscuro">Ingresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <div class="barra-intranet">
+            <div>
+                <p class="etiqueta-titulo">Intranet</p>
+                <h1>Plantas del catálogo</h1>
+            </div>
+            <a href="planta-form.html" class="btn btn-oscuro">+ Nueva planta</a>
+        </div>
+
+        <div id="intranet-aviso" class="alerta oculto" role="status"></div>
+        <p id="contador-listado" class="resultados-info"></p>
+
+        <div id="estado-carga" class="cargando">Cargando plantas…</div>
+
+        <div class="tabla-contenedor">
+            <table class="tabla" id="tabla-plantas">
+                <caption class="visualmente-oculto">Listado de plantas con acciones de edición y eliminación</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Ingreso</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla">
+                    <!-- Las filas se generan desde los datos (js/intranet.js) -->
+                </tbody>
+            </table>
+        </div>
+
+        <section class="panel-grafico" aria-labelledby="titulo-grafico">
+            <h2 id="titulo-grafico">Stock por categoría</h2>
+            <div class="grafico-caja">
+                <canvas id="grafico-stock" aria-label="Gráfico de barras del stock por categoría" role="img"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="footer-columnas">
+                <section>
+                    <h2>Vivero Raíz</h2>
+                    <address>
+                        <p>Ruta 25 km 4,5<br>Escobar, Buenos Aires</p>
+                        <p><a href="tel:+541144445566">(011) 4444-5566</a></p>
+                        <p><a href="mailto:hola@viveroraiz.com">hola@viveroraiz.com</a></p>
+                    </address>
+                </section>
+                <nav aria-label="Secciones del sitio">
+                    <h2>Secciones</h2>
+                    <ul>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="login.html">Ingresar</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h2>Horarios</h2>
+                    <p>Lunes a viernes de 9 a 18</p>
+                    <p>Sábados de 9 a 13</p>
+                    <p>Domingos cerrado</p>
+                </section>
+            </div>
+            <p class="copyright">© 2026 Vivero Raíz — Cultivamos con amor</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/sesion.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/intranet.js"></script>
+</body>
+
+</html>

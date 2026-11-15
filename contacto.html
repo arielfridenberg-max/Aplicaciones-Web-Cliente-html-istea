@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultas, encargos y datos de contacto de Vivero Raíz.">
+    <title>Contacto | Vivero Raíz</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="contenedor header-inner">
+            <a href="index.html" class="logo">Vivero Raíz</a>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+            <nav id="menu" class="nav" aria-label="Principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+                    <li id="nav-sesion"><a href="login.html" class="btn btn-oscuro">Ingresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="encabezado-pagina">
+            <h1>Contacto</h1>
+            <p class="subtitulo">Escribinos por encargos, envíos o asesoramiento. Respondemos dentro de las 48 horas hábiles.</p>
+        </section>
+
+        <div class="contacto-grilla">
+            <section aria-labelledby="titulo-form">
+                <h2 id="titulo-form" class="visualmente-oculto">Formulario de consulta</h2>
+
+                <form id="form-contacto" novalidate>
+                    <div class="fila-2">
+                        <div class="campo">
+                            <label for="nombre">Nombre y apellido *</label>
+                            <input type="text" id="nombre" name="nombre" autocomplete="name">
+                            <p class="error" id="error-nombre"></p>
+                        </div>
+                        <div class="campo">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" autocomplete="email">
+                            <p class="error" id="error-email"></p>
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+                            <p class="error" id="error-telefono"></p>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo">Motivo *</label>
+                            <select id="motivo" name="motivo">
+                                <option value="">Elegí un motivo</option>
+                                <option value="encargo">Encargo de plantas</option>
+                                <option value="envio">Consulta por un envío</option>
+                                <option value="asesoramiento">Asesoramiento</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <p class="error" id="error-motivo"></p>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                        <p class="error" id="error-mensaje"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label class="opcion"><input type="checkbox" id="novedades" name="novedades"> Quiero recibir las novedades del vivero</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-oscuro">Enviar consulta</button>
+                </form>
+            </section>
+
+            <aside class="panel-lateral" id="ubicacion" aria-labelledby="titulo-donde">
+                <h2 id="titulo-donde">Dónde estamos</h2>
+                <p>Ruta 25 km 4,5 — Escobar, Buenos Aires<br>(011) 4444-5566 · hola@viveroraiz.com</p>
+
+                <h2>Horarios de atención</h2>
+                <table class="tabla">
+                    <thead>
+                        <tr><th scope="col">Día</th><th scope="col">Horario</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Lunes a viernes</td><td>9 a 18</td></tr>
+                        <tr><td>Sábados</td><td>9 a 13</td></tr>
+                        <tr><td>Domingos</td><td>Cerrado</td></tr>
+                    </tbody>
+                </table>
+
+                <iframe class="mapa" title="Mapa de ubicación del vivero en Escobar" loading="lazy"
+                    src="https://www.google.com/maps?q=Escobar,+Buenos+Aires&amp;output=embed"></iframe>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="footer-columnas">
+                <section>
+                    <h2>Vivero Raíz</h2>
+                    <address>
+                        <p>Ruta 25 km 4,5<br>Escobar, Buenos Aires</p>
+                        <p><a href="tel:+541144445566">(011) 4444-5566</a></p>
+                        <p><a href="mailto:hola@viveroraiz.com">hola@viveroraiz.com</a></p>
+                    </address>
+                </section>
+                <nav aria-label="Secciones del sitio">
+                    <h2>Secciones</h2>
+                    <ul>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="login.html">Ingresar</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h2>Horarios</h2>
+                    <p>Lunes a viernes de 9 a 18</p>
+                    <p>Sábados de 9 a 13</p>
+                    <p>Domingos cerrado</p>
+                </section>
+            </div>
+            <p class="copyright">© 2026 Vivero Raíz — Cultivamos con amor</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/sesion.js"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+
+</html>
